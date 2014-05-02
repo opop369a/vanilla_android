@@ -24,15 +24,17 @@ public class ImageListenerFactory{
         @Override
         public void onResponse(ImageContainer response, boolean isImmediate) {
             if (response.getBitmap() != null) {
-                  Log.i("assert", view.getTag().toString());
-                if(view.getTag().toString() == response.getRequestUrl()){
-                        view.setImageBitmap(response.getBitmap());
-                }else{
-                        Log.i(TAG, "Í¼Æ¬´íÎ»");
-                }
-            } else if (defaultImageResId != 0) {
-                view.setImageResource(defaultImageResId);
+            	view.setImageBitmap(response.getBitmap());
+//                  Log.i("assert", view.getTag().toString());
+//                if(view.getTag().toString() == response.getRequestUrl()){
+//                        view.setImageBitmap(response.getBitmap());
+//                }else{
+//                        Log.i(TAG, "Í¼Æ¬´íÎ»");
+//                }
             }
+//            	else if (defaultImageResId != 0) {
+//                view.setImageResource(defaultImageResId);
+//            }
         }
     };
 }

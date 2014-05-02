@@ -33,13 +33,14 @@ public final class R {
         public static final int userback=0x7f020008;
     }
     public static final class id {
-        public static final int ImageView1=0x7f08000a;
-        public static final int action_forgot_password=0x7f080013;
-        public static final int action_settings=0x7f080014;
-        public static final int button1=0x7f08000b;
+        public static final int FrameLayout01=0x7f080008;
+        public static final int Gallery01=0x7f08000b;
+        public static final int ImageView01=0x7f080009;
+        public static final int action_forgot_password=0x7f080014;
+        public static final int action_settings=0x7f080015;
+        public static final int button1=0x7f08000a;
         public static final int email=0x7f080003;
         public static final int imageButton1=0x7f08000d;
-        public static final int linearlayout=0x7f080008;
         public static final int login=0x7f080005;
         public static final int login_form=0x7f080002;
         public static final int login_status=0x7f080000;
@@ -48,12 +49,12 @@ public final class R {
         public static final int password=0x7f080004;
         public static final int section_label=0x7f08000c;
         public static final int sign_in_button=0x7f080006;
-        public static final int textView1=0x7f080009;
-        public static final int textView2=0x7f08000e;
-        public static final int textView3=0x7f08000f;
-        public static final int textView4=0x7f080010;
-        public static final int travelitemimg=0x7f080012;
-        public static final int travelitemtext=0x7f080011;
+        public static final int textView1=0x7f08000e;
+        public static final int textView2=0x7f08000f;
+        public static final int textView3=0x7f080010;
+        public static final int textView4=0x7f080011;
+        public static final int travelitemimg=0x7f080013;
+        public static final int travelitemtext=0x7f080012;
     }
     public static final class layout {
         public static final int activity_login=0x7f030000;
@@ -129,4 +130,25 @@ public final class R {
         public static final int AppTheme=0x7f060001;
         public static final int LoginFormContainer=0x7f060002;
     }
+    public static final class styleable {
+        /** Attributes that can be used with a HelloGallery.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #HelloGallery_android_galleryItemBackground android:galleryItemBackground}</code></td><td></td></tr>
+           </table>
+           @see #HelloGallery_android_galleryItemBackground
+         */
+        public static final int[] HelloGallery = {
+            0x0101004c
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#galleryItemBackground}
+          attribute's value can be found in the {@link #HelloGallery} array.
+          @attr name android:galleryItemBackground
+        */
+        public static final int HelloGallery_android_galleryItemBackground = 0;
+    };
 }
