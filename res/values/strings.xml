@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <string name="app_name">香草旅行</string>
+    <string name="title_section1">Home</string>
+    <string name="title_section2">Travel</string>
+    <string name="title_section3">Profile</string>
+    <string name="action_settings">设置</string>
+    <string name="index_name">推荐景点</string>
+    <string name="name_hint">请输入用户名</string>
+    <string name="pw_hint">请输入密码</string>
+    <string name="user_name_title">用户名</string>
+    <string name="user_intro_title">简介</string>
+    <string name="user_intro_content">爱旅游，爱生活，欢迎小伙伴骚扰~</string>
+    <string name="user_district_title">所在地</string>
+    <string name="user_tel_title">手机号码</string>
+    <string name="user_email_title">电子邮箱</string>    
+    <string name="index_new_travel_begin">开始新旅行</string>
+    <string name="user_logout">退出登录 </string>
+
+</resources>
