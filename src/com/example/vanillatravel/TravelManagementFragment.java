@@ -3,33 +3,35 @@ package com.example.vanillatravel;
 import java.util.ArrayList;
 import java.util.List;
 
-import android.app.Fragment;
+import android.app.ActionBar;
 import android.app.ListFragment;
-import android.graphics.Color;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.webkit.WebView.FindListener;
 import android.widget.ArrayAdapter;
-import android.widget.LinearLayout;
-import android.widget.LinearLayout.LayoutParams;
 import android.widget.ListView;
 
 public class TravelManagementFragment extends ListFragment {
 	
 	List<TravelItem> data;
+	ArrayAdapter<TravelItem> adapter;
+	
+	static final int TrDetailOpenReq = 1;
 	
 	@Override
 	public void onActivityCreated(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onActivityCreated(savedInstanceState);
+			
 		
 		data = new ArrayList<TravelItem>();
 		appendData();
 		
-		ArrayAdapter<TravelItem> adapter = new TravelItemAdapter(getActivity(), R.layout.travlelistitem, data);
+		adapter = new TravelItemAdapter(getActivity(), R.layout.travlelistitem, data);
 		setListAdapter(adapter);
+		
 	}
 	
 	private void appendData(){
@@ -49,5 +51,19 @@ public class TravelManagementFragment extends ListFragment {
 		// TODO Auto-generated method stub
 		return inflater.inflate(R.layout.fragment_travelmanagement, container, false);
 	}
+	
+	public void addTravelItem(TravelItem item) {
+		adapter.add(item);
+		adapter.notifyDataSetChanged();
+	}
+	
+	@Override
+	public void onListItemClick(ListView l, View v, int position, long id) {
+		// TODO Auto-generated method stub
+		super.onListItemClick(l, v, position, id);
+		Intent intent = new Intent(getActivity(),TravelDetailActivity.class);
+		startActivityForResult(intent, TrDetailOpenReq);
+	}
+	
 
 }

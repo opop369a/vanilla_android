@@ -14,8 +14,13 @@
     <string name="user_intro_content">爱旅游，爱生活，欢迎小伙伴骚扰~</string>
     <string name="user_district_title">所在地</string>
     <string name="user_tel_title">手机号码</string>
-    <string name="user_email_title">电子邮箱</string>    
+    <string name="user_email_title">电子邮箱</string>
     <string name="index_new_travel_begin">开始新旅行</string>
     <string name="user_logout">退出登录 </string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_new_travel">开始新旅行</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_travel_detail">旅行记录</string>
 
 </resources>

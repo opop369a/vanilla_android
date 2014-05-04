@@ -1,12 +1,8 @@
 package com.example.vanillatravel.viewfeature;
 
-import java.io.File;
-import java.lang.reflect.Field;
-
 import android.content.Context;
 import android.content.res.TypedArray;
 import android.graphics.Bitmap;
-import android.media.ImageReader;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
@@ -84,7 +80,7 @@ public class ImageAdapter extends BaseAdapter {
 			imageView.setId(-1);
 		}
 		imageView.setLayoutParams(new Gallery.LayoutParams(200, 160));
-		imageView.setScaleType(ImageView.ScaleType.FIT_XY);
+		imageView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
 		Log.i(TAG, "getView called");
 		return imageView;
 	}

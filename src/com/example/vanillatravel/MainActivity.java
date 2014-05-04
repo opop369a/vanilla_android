@@ -10,6 +10,7 @@ import android.app.ActionBar;
 import android.app.Fragment;
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
+import android.content.Intent;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -20,6 +21,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends Activity implements ActionBar.TabListener {
 
@@ -31,6 +33,12 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 	 * {@link android.support.v13.app.FragmentStatePagerAdapter}.
 	 */
 	SectionsPagerAdapter mSectionsPagerAdapter;
+	
+	private static final int INDEX_FRAGMENT = 0;
+	private static final int TRAVEL_FRAGMENT = 1;
+	private static final int USER_FRAGMENT = 2;
+
+	
 
 	/**
 	 * The {@link ViewPager} that will host the section contents.
@@ -76,6 +84,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 				.setTabListener(this));
 	}
 
+	/* ´´½¨¶¥¶Ëmenu
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
@@ -96,6 +105,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 		return super.onOptionsItemSelected(item);
 	}
 
+*/
 	@Override
 	public void onTabSelected(ActionBar.Tab tab,
 			FragmentTransaction fragmentTransaction) {
@@ -129,6 +139,7 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 			indexf = new IndexFragment();
 			travelManagementf = new TravelManagementFragment();
 			userf = new UserFragment();
+			
 		}
 
 		@Override
@@ -176,6 +187,20 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 			}
 			return null;
 		}
+		
+		public Fragment getFragmentByID(int id) {
+			switch (id) {
+			case INDEX_FRAGMENT:
+				return indexf;
+			case TRAVEL_FRAGMENT:
+				return travelManagementf;
+			case USER_FRAGMENT:
+				return  userf;
+			default:
+				return null;
+			}
+			
+		}
 	}
 
 	/**
@@ -214,6 +239,20 @@ public class MainActivity extends Activity implements ActionBar.TabListener {
 			return rootView;
 		}
 	
+	}
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		// TODO Auto-generated method stub
+		super.onActivityResult(requestCode, resultCode, data);
+		if (resultCode == RESULT_OK) {
+			String travel_name = data.getStringExtra("travel_name");
+			String travel_place = data.getStringExtra("travel_place");
+			String travel_time = data.getStringExtra("travel_time");
+			TravelItem item = new TravelItem(travel_name, R.drawable.ic_launcher);
+			((TravelManagementFragment)mSectionsPagerAdapter.getFragmentByID(TRAVEL_FRAGMENT)).addTravelItem(item);  
+			mViewPager.setCurrentItem(TRAVEL_FRAGMENT);
+		}
 	}
 
 }

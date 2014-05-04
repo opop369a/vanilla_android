@@ -56,5 +56,6 @@ public class TravelItemAdapter extends ArrayAdapter<TravelItem>{
 		ImageView imgView;
 		TextView txtView;
 	}
+	
 }
 

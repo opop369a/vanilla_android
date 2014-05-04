@@ -1,22 +1,25 @@
 package com.example.vanillatravel;
 
+import com.example.vanillatravel.viewfeature.ImageAdapter;
+
 import android.app.Fragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
+import android.widget.Button;
 import android.widget.Gallery;
 import android.widget.ImageView;
 import android.widget.Toast;
 
-import com.example.vanillatravel.viewfeature.ImageAdapter;
-
 public class IndexFragment extends Fragment {
 	
 	private int recom_total = 3;
-
+	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
@@ -39,7 +42,7 @@ public class IndexFragment extends Fragment {
 		super.onActivityCreated(savedInstanceState);
 		   final ImageView iv= (ImageView)getView().findViewById(R.id.ImageView01);
            Gallery g = (Gallery) getView().findViewById(R.id.Gallery01);
-           g.setAdapter(new ImageAdapter(getActivity(),"http://192.168.96.2/~BAO/travel_android/Recommendation/recom" , recom_total));
+           g.setAdapter(new ImageAdapter(getActivity(),"http://192.168.95.2/~BAO/travel_android/Recommendation/recom" , recom_total));
            
            g.setOnItemClickListener(new OnItemClickListener() {
 
@@ -47,8 +50,19 @@ public class IndexFragment extends Fragment {
 			public void onItemClick(AdapterView<?> parent, View view, int position,
 					long id) {
 				// TODO Auto-generated method stub\
-				Toast.makeText(getActivity(), ""+position,Toast.LENGTH_LONG).show();
 				iv.setImageDrawable(((ImageView)view).getDrawable());
+			}
+		});
+          
+           
+           Button button = (Button) getView().findViewById(R.id.button1);
+           button.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent = new Intent(getActivity(), NewTravelActivity.class);
+				getActivity().startActivityForResult(intent, 0);
 			}
 		});
 	}

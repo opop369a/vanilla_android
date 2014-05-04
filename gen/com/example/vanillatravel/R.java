@@ -9,6 +9,17 @@ package com.example.vanillatravel;
 
 public final class R {
     public static final class attr {
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int metaButtonBarButtonStyle=0x7f010001;
+        /** <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+         */
+        public static final int metaButtonBarStyle=0x7f010000;
+    }
+    public static final class color {
+        public static final int black_overlay=0x7f040000;
     }
     public static final class dimen {
         /**  Default screen margins, per the Android Design guidelines. 
@@ -18,8 +29,8 @@ public final class R {
          would include 7" and 10" devices in landscape (~960dp and ~1280dp respectively).
     
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
         public static final int a=0x7f020000;
@@ -27,93 +38,114 @@ public final class R {
         public static final int c=0x7f020002;
         public static final int d=0x7f020003;
         public static final int e=0x7f020004;
-        public static final int head=0x7f020005;
-        public static final int ic_launcher=0x7f020006;
-        public static final int pujidao=0x7f020007;
-        public static final int userback=0x7f020008;
+        public static final int gallarybg=0x7f020005;
+        public static final int head=0x7f020006;
+        public static final int ic_launcher=0x7f020007;
+        public static final int pujidao=0x7f020008;
+        public static final int userback=0x7f020009;
     }
     public static final class id {
-        public static final int FrameLayout01=0x7f080008;
-        public static final int Gallery01=0x7f08000b;
-        public static final int ImageView01=0x7f080009;
-        public static final int action_forgot_password=0x7f080014;
-        public static final int action_settings=0x7f080015;
-        public static final int button1=0x7f08000a;
-        public static final int email=0x7f080003;
-        public static final int imageButton1=0x7f08000d;
-        public static final int login=0x7f080005;
-        public static final int login_form=0x7f080002;
-        public static final int login_status=0x7f080000;
-        public static final int login_status_message=0x7f080001;
-        public static final int pager=0x7f080007;
-        public static final int password=0x7f080004;
-        public static final int section_label=0x7f08000c;
-        public static final int sign_in_button=0x7f080006;
-        public static final int textView1=0x7f08000e;
-        public static final int textView2=0x7f08000f;
-        public static final int textView3=0x7f080010;
-        public static final int textView4=0x7f080011;
-        public static final int travelitemimg=0x7f080013;
-        public static final int travelitemtext=0x7f080012;
+        public static final int FrameLayout01=0x7f090010;
+        public static final int Gallery01=0x7f090013;
+        public static final int ImageView01=0x7f090011;
+        public static final int action_forgot_password=0x7f09001c;
+        public static final int action_settings=0x7f09001d;
+        public static final int button1=0x7f090012;
+        public static final int dummy_button=0x7f09000d;
+        public static final int editText1=0x7f090009;
+        public static final int editText2=0x7f09000a;
+        public static final int editText3=0x7f09000b;
+        public static final int email=0x7f090003;
+        public static final int fullscreen_content=0x7f090008;
+        public static final int fullscreen_content_controls=0x7f09000c;
+        public static final int gallery=0x7f09000f;
+        public static final int imageButton1=0x7f090015;
+        public static final int login=0x7f090005;
+        public static final int login_form=0x7f090002;
+        public static final int login_status=0x7f090000;
+        public static final int login_status_message=0x7f090001;
+        public static final int pager=0x7f090007;
+        public static final int password=0x7f090004;
+        public static final int section_label=0x7f090014;
+        public static final int sign_in_button=0x7f090006;
+        public static final int switcher=0x7f09000e;
+        public static final int textView1=0x7f090016;
+        public static final int textView2=0x7f090017;
+        public static final int textView3=0x7f090018;
+        public static final int textView4=0x7f090019;
+        public static final int travelitemimg=0x7f09001b;
+        public static final int travelitemtext=0x7f09001a;
     }
     public static final class layout {
         public static final int activity_login=0x7f030000;
         public static final int activity_main=0x7f030001;
-        public static final int fragment_index=0x7f030002;
-        public static final int fragment_main=0x7f030003;
-        public static final int fragment_travelmanagement=0x7f030004;
-        public static final int fragment_user=0x7f030005;
-        public static final int travlelistitem=0x7f030006;
+        public static final int activity_new_travel=0x7f030002;
+        public static final int activity_travel_detail=0x7f030003;
+        public static final int fragment_index=0x7f030004;
+        public static final int fragment_main=0x7f030005;
+        public static final int fragment_travel_detail=0x7f030006;
+        public static final int fragment_travelmanagement=0x7f030007;
+        public static final int fragment_user=0x7f030008;
+        public static final int travlelistitem=0x7f030009;
     }
     public static final class menu {
-        public static final int login=0x7f070000;
-        public static final int main=0x7f070001;
+        public static final int login=0x7f080000;
+        public static final int main=0x7f080001;
+        public static final int travel_detail=0x7f080002;
     }
     public static final class string {
-        public static final int action_forgot_password=0x7f050016;
-        public static final int action_settings=0x7f050004;
-        public static final int action_sign_in_register=0x7f050013;
-        public static final int action_sign_in_short=0x7f050015;
-        public static final int action_sign_up_register=0x7f050014;
-        public static final int app_name=0x7f050000;
-        public static final int error_field_required=0x7f05001b;
-        public static final int error_incorrect_password=0x7f05001a;
-        public static final int error_invalid_email=0x7f050018;
-        public static final int error_invalid_password=0x7f050019;
-        public static final int index_name=0x7f050005;
-        public static final int index_new_travel_begin=0x7f05000e;
-        public static final int login_progress_signing_in=0x7f050017;
-        public static final int name_hint=0x7f050006;
+        public static final int action_forgot_password=0x7f06001b;
+        public static final int action_settings=0x7f060004;
+        public static final int action_sign_in_register=0x7f060018;
+        public static final int action_sign_in_short=0x7f06001a;
+        public static final int action_sign_up_register=0x7f060019;
+        public static final int app_name=0x7f060000;
+        public static final int dummy_button=0x7f060010;
+        public static final int dummy_content=0x7f060011;
+        public static final int error_field_required=0x7f060020;
+        public static final int error_incorrect_password=0x7f06001f;
+        public static final int error_invalid_email=0x7f06001d;
+        public static final int error_invalid_password=0x7f06001e;
+        public static final int hello_world=0x7f060013;
+        public static final int index_name=0x7f060005;
+        public static final int index_new_travel_begin=0x7f06000e;
+        public static final int login_progress_signing_in=0x7f06001c;
+        public static final int name_hint=0x7f060006;
         /**  Strings related to login 
          */
-        public static final int prompt_email=0x7f050011;
-        public static final int prompt_password=0x7f050012;
-        public static final int pw_hint=0x7f050007;
-        public static final int title_activity_login=0x7f050010;
-        public static final int title_section1=0x7f050001;
-        public static final int title_section2=0x7f050002;
-        public static final int title_section3=0x7f050003;
-        public static final int user_district_title=0x7f05000b;
-        public static final int user_email_title=0x7f05000d;
-        public static final int user_intro_content=0x7f05000a;
-        public static final int user_intro_title=0x7f050009;
-        public static final int user_logout=0x7f05000f;
-        public static final int user_name_title=0x7f050008;
-        public static final int user_tel_title=0x7f05000c;
+        public static final int prompt_email=0x7f060016;
+        public static final int prompt_password=0x7f060017;
+        public static final int pw_hint=0x7f060007;
+        public static final int title_activity_login=0x7f060015;
+        public static final int title_activity_new_travel=0x7f060012;
+        public static final int title_activity_travel_detail=0x7f060014;
+        public static final int title_section1=0x7f060001;
+        public static final int title_section2=0x7f060002;
+        public static final int title_section3=0x7f060003;
+        public static final int user_district_title=0x7f06000b;
+        public static final int user_email_title=0x7f06000d;
+        public static final int user_intro_content=0x7f06000a;
+        public static final int user_intro_title=0x7f060009;
+        public static final int user_logout=0x7f06000f;
+        public static final int user_name_title=0x7f060008;
+        public static final int user_tel_title=0x7f06000c;
     }
     public static final class style {
         /** 
         Base application theme, dependent on API level. This theme is replaced
         by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
+
     
 
             Theme customizations available in newer API levels can go in
             res/values-vXX/styles.xml, while customizations related to
             backward-compatibility can go here.
+
         
 
         Base application theme for API 11+. This theme completely replaces
         AppBaseTheme from res/values/styles.xml on API 11+ devices.
+
     
  API 11 theme customizations can go here. 
 
@@ -123,14 +155,72 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
-        public static final int LoginFormContainer=0x7f060002;
+        public static final int AppTheme=0x7f070001;
+        public static final int ButtonBar=0x7f070004;
+        public static final int ButtonBarButton=0x7f070005;
+        public static final int FullscreenActionBarStyle=0x7f070006;
+        public static final int FullscreenTheme=0x7f070003;
+        public static final int LoginFormContainer=0x7f070002;
     }
     public static final class styleable {
+        /** Attributes that can be used with a ButtonBarContainerTheme.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #ButtonBarContainerTheme_metaButtonBarButtonStyle com.example.vanillatravel:metaButtonBarButtonStyle}</code></td><td></td></tr>
+           <tr><td><code>{@link #ButtonBarContainerTheme_metaButtonBarStyle com.example.vanillatravel:metaButtonBarStyle}</code></td><td></td></tr>
+           </table>
+           @see #ButtonBarContainerTheme_metaButtonBarButtonStyle
+           @see #ButtonBarContainerTheme_metaButtonBarStyle
+         */
+        public static final int[] ButtonBarContainerTheme = {
+            0x7f010000, 0x7f010001
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.vanillatravel.R.attr#metaButtonBarButtonStyle}
+          attribute's value can be found in the {@link #ButtonBarContainerTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.example.vanillatravel:metaButtonBarButtonStyle
+        */
+        public static final int ButtonBarContainerTheme_metaButtonBarButtonStyle = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.example.vanillatravel.R.attr#metaButtonBarStyle}
+          attribute's value can be found in the {@link #ButtonBarContainerTheme} array.
+
+
+          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+          @attr name com.example.vanillatravel:metaButtonBarStyle
+        */
+        public static final int ButtonBarContainerTheme_metaButtonBarStyle = 0;
+        /** Attributes that can be used with a Gallery1.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #Gallery1_android_galleryItemBackground android:galleryItemBackground}</code></td><td></td></tr>
+           </table>
+           @see #Gallery1_android_galleryItemBackground
+         */
+        public static final int[] Gallery1 = {
+            0x0101004c
+        };
+        /**
+          <p>This symbol is the offset where the {@link android.R.attr#galleryItemBackground}
+          attribute's value can be found in the {@link #Gallery1} array.
+          @attr name android:galleryItemBackground
+        */
+        public static final int Gallery1_android_galleryItemBackground = 0;
         /** Attributes that can be used with a HelloGallery.
            <p>Includes the following attributes:</p>
            <table>
