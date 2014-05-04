@@ -22,5 +22,6 @@
     <string name="title_activity_new_travel">开始新旅行</string>
     <string name="hello_world">Hello world!</string>
     <string name="title_activity_travel_detail">旅行记录</string>
+    <string name="share">分享</string>
 
 </resources>

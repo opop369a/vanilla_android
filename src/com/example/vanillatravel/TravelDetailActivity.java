@@ -5,12 +5,13 @@ import java.util.ArrayList;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.AlertDialog.Builder;
 import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ShareActionProvider;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,6 +27,7 @@ import android.widget.ImageSwitcher;
 import android.widget.ImageView;
 import android.widget.ViewSwitcher.ViewFactory;
 
+
 public class TravelDetailActivity extends Activity implements 
 ViewFactory,OnItemSelectedListener,OnItemLongClickListener {
 	
@@ -33,6 +35,8 @@ ViewFactory,OnItemSelectedListener,OnItemLongClickListener {
 	private Gallery gallery;
 	
 	private ArrayList<Integer> mImageIds;
+	
+	private ShareActionProvider mShareActionProvider;
 
 	
 //	private Integer[] mImageIds = { R.drawable.b, R.drawable.c,
@@ -81,7 +85,19 @@ ViewFactory,OnItemSelectedListener,OnItemLongClickListener {
 
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.travel_detail, menu);
-		return true;
+	    MenuItem shareItem = menu.findItem(R.id.action_share);
+	    mShareActionProvider =(ShareActionProvider) shareItem.getActionProvider();
+	    Intent intent = new Intent(Intent.ACTION_SEND);
+	    intent.setType("image/*");
+	    setShareIntent(intent);
+	    return true;
+	}
+		
+	private void setShareIntent(Intent intent) {
+		if (mShareActionProvider != null) {
+			mShareActionProvider.setShareIntent(intent);
+		}
+		
 	}
 
 	@Override
